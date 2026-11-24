@@ -126,3 +126,21 @@ a:focus-visible {
     transition: none;
   }
 }
+
+/* Низкие вьюпорты (ландшафт телефона): футер встаёт в поток, чтобы не перекрывать карточку */
+@media (max-height: 540px) {
+  body {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .card {
+    margin-block: auto;
+  }
+
+  .footer {
+    position: static;
+    margin-top: 24px;
+    padding: 0;
+  }
+}
