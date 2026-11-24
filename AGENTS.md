@@ -65,7 +65,7 @@ design/               макеты, превью и исходники гене�
 - `assets/icons/` — `favicon.ico` (16/24/32/48), PNG 16/24/32/48, варианты rounded и circle, `apple-touch-icon.png` 180, `icon-192/512`, `icon-maskable-512`; в `head` подключены базовые.
 - `favicon.ico` продублирован в корень, потому что браузеры запрашивают его по умолчанию.
 - `assets/icons/site.webmanifest` — имя, `short_name` «Елена Карташова», белый `theme_color`/`background_color`, пути к иконкам относительные.
-- OG-картинки сделаны вручную (не скриптом, чтобы сохранить EB Garamond): `assets/og/og-image-1200x630.png` и `assets/og/og-square-1080.png` — белый фон, овальная аватарка 3:4, подпись EB Garamond medium. Генератор — `design/og-1200x630.html` и `design/og-1080.html` (рендер в браузере 1200×630 / 1080×1080, затем ресайз).
+- OG-картинки сделаны вручную (не скриптом, чтобы сохранить EB Garamond): `assets/og/og-image-1200x630.png` и `assets/og/og-square-1080.png` — белый фон, овальная аватарка 3:4, подпись EB Garamond medium. Размеры подписи масштабированы от сайта (24px на колонке 320px): 1200×630 — аватар 160×213, подпись 56px; 1080×1080 — аватар 180×240, подпись 64px. Литеральные 24px на OG-картинке нечитаемы в превью мессенджеров. Генератор — `design/og-1200x630.html` и `design/og-1080.html` (рендер в браузере 1200×630 / 1080×1080, затем ресайз).
 - При смене аватарки пересобрать: кроп → `node build.mjs --input design/avatar-crop.jpg --name "Художница Елена Карташова" --slug ek --envs prod --og false --zip false --out-dir assets/icons` (скилл `favicon-creator`), затем заново отрендерить OG-страницы.
 
 ## Правила
